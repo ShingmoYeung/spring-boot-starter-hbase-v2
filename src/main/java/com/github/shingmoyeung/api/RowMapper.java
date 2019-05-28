@@ -1,6 +1,7 @@
 package com.github.shingmoyeung.api;
 
 import org.apache.hadoop.hbase.client.Result;
+import org.apache.hadoop.hbase.client.ResultScanner;
 
 /**
  * Created by IntelliJ IDEA 2019.
@@ -12,6 +13,7 @@ import org.apache.hadoop.hbase.client.Result;
  */
 public interface RowMapper<T> {
     /**
+     * 回调函数，用于在每一行的基础上映射{@link ResultScanner}的行
      *
      * @param result
      * @param rowNum
